@@ -21,6 +21,7 @@ Nov 22 (80%)
 Nov 25 (100%)
 1. The user will not have to wait for loading (Extra Credit)
 Dec 03 (100%)
+1. Recovery Time
 
 
 ## Hard Things plan
