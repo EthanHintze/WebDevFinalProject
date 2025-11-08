@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+        <script src="ui.js" defer></script>
+    <title>Simple Navigator</title>
+    
+</head>
+<body>
+    <div class="app">
+        <div class="shell">
+            <header>
+                <a href="#/" class="brand" aria-label="Home">
+                    <div class="logo">EP</div>
+                    <div>
+                        <div style="font-weight:700">Easy Papers</div>
+                        <div class="muted" style="font-size:12px">Clean, Fast, Simple</div>
+                    </div>
+                </a>
+
+                <nav aria-label="Primary">
+                    <a class="navlink" href="#/" data-route="/">Home</a>
+                    <a class="navlink" href="#/projects" data-route="/projects">Projects</a>
+                    <a class="navlink" href="#/about" data-route="/about">Formats and Help</a>
+                </nav>
+            </header>
+
+            <main>
+                <section id="home" class="page" aria-labelledby="home-title">
+                    <h1 id="home-title">Welcome</h1>
+                    <p class="muted">This is a paper writing application that focuses on aiding the essay writing process</p>
+
+                    <div class="grid">
+                        <div class="card">
+                            <strong>Fast</strong>
+                        </div>
+                        <div class="card">
+                            <strong>Accessible</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about" class="page" aria-labelledby="about-title">
+                    <h1 id="about-title">Formats and Help</h1>
+                    <p class="muted">This is where format help and general essay writing information will go.</p>
+                    
+                </section>
+
+                <section id="projects" class="page" aria-labelledby="projects-title">
+                    <h1 id="projects-title">Projects</h1>
+                    <div class="grid" style="margin-top:12px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+                        <div class="card"><strong>Project A</strong><div class="muted" style="margin-top:6px">A sample project card.</div></div>
+                        <div class="card"><strong>Project B</strong><div class="muted" style="margin-top:6px">Another demo item.</div></div>
+                        <div class="card"><strong>Project C</strong><div class="muted" style="margin-top:6px">Keep your portfolio here.</div></div>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer>
+                <div class="muted">Easy Papers</div>
+            </footer>
+        </div>
+    </div>
+
+    
+</body>
+</html>
