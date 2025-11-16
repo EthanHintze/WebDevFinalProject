@@ -1,5 +1,4 @@
 // Simple hash-based router
-(function () {
   const routes = {
     "/": "home",
     "/about": "about",
@@ -48,4 +47,3 @@
   // initial render and listen for changes
   window.addEventListener("hashchange", render);
   window.addEventListener("load", render);
-})();
