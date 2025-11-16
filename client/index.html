@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-        <script src="ui.js" type="module"></script>
+    <script src="ui.js" type="module"></script>
+    <script src="domain.js" type="module"></script>
     <title>Simple Navigator</title>
     
 </head>
@@ -23,6 +24,7 @@
                 <nav aria-label="Primary">
                     <a class="navlink" href="#/" data-route="/">Home</a>
                     <a class="navlink" href="#/projects" data-route="/projects">Projects</a>
+                    <a class="navlink" href="#/newproject" data-route="/newproject">New Project</a>
                     <a class="navlink" href="#/about" data-route="/about">Formats and Help</a>
                 </nav>
             </header>
@@ -50,12 +52,27 @@
 
                 <section id="projects" class="page" aria-labelledby="projects-title">
                     <h1 id="projects-title">Projects</h1>
-                    <div class="grid" style="margin-top:12px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
-                        <div class="card"><strong>Project A</strong><div class="muted" style="margin-top:6px">A sample project card.</div></div>
-                        <div class="card"><strong>Project B</strong><div class="muted" style="margin-top:6px">Another demo item.</div></div>
-                        <div class="card"><strong>Project C</strong><div class="muted" style="margin-top:6px">Keep your portfolio here.</div></div>
+                    <div id="projects-grid" class="grid" style="margin-top:12px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+                        
                     </div>
                 </section>
+
+                <section id="newproject" class="page" aria-labelledby="newproject-title">
+                    <h1 id="newproject-title">New Project</h1>
+                    <form id="new-project-form">
+                        <label for="project-title">Project Title:</label>
+                        <input type="text" id="project-title" name="project-title" required />
+
+                        <label for="project-type">Project Type:</label>
+                        <input type="text" id="project-type" name="project-type" required />
+
+                        <button type="submit">Create Project</button>
+                    </form>
+
+                    
+                    </form>
+                </section>
+
 
             </main>
 
