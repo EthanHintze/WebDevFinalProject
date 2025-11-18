@@ -102,7 +102,12 @@ footer {
   margin-top: 12px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
-
+.category-div {
+  background: var(--bg);
+  border-color: var(--accent);
+  border-radius: var(--radius);
+  padding: 28px;
+}
 .project-form {
   background-color: var(--card);
   color:var(--text);
@@ -112,6 +117,7 @@ footer {
 .card {
   background: #44484d;
   padding: 14px;
+  margin-right: 30px;
   border-radius: 8px;
   border: 1px solid rgba(15, 23, 42, 0.04);
   box-shadow: var(--shadow);
@@ -123,7 +129,7 @@ footer {
   margin-top: 12px;
 }
 button {
-  background: var(--accent);
+  background: var(--bg);
   color: #d7d7e0;
   border: 0;
   padding: 8px 12px;
