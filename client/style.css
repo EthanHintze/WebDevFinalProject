@@ -2,7 +2,8 @@
   --bg: #19222b;
   --card: #36343d;
   --accent: #2c457a;
-  --muted: #6e7480;
+  --muted: #8e95a3;
+  --text: #99a1b4;
   --radius: 10px;
   --shadow: 0 6px 18px rgba(32, 33, 36, 0.08);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
@@ -16,7 +17,7 @@ body {
   height: 100%;
   margin: 0;
   background: linear-gradient(180deg, #24292e 0, #343255 100%);
-  color: #99a1b4;
+  color:var(--text);
 }
 .app {
   min-height: 100vh;
@@ -98,12 +99,23 @@ footer {
   gap: 12px;
   margin-top: 16px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.project-form {
+  background-color: var(--card);
+  color:var(--text);
+  border: 1px solid var(--muted);
+  border-radius:5px;
 }
 .card {
-  background: #6b747c;
+  background: #44484d;
   padding: 14px;
   border-radius: 8px;
   border: 1px solid rgba(15, 23, 42, 0.04);
+  box-shadow: var(--shadow);
+  
 }
 .controls {
   display: flex;

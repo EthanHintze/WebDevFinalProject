@@ -45,6 +45,7 @@ document.addEventListener("click", (e) => {
 window.addEventListener("hashchange", render);
 window.addEventListener("load", render);
 
+// Handle new project form submission
 document
   .getElementById("new-project-form")
   .addEventListener("submit", function (event) {
@@ -53,11 +54,13 @@ document
     const title = document.getElementById("project-title").value;
     const type = document.getElementById("project-type").value;
 
-    const card = document.createElement("div");
+    const card = document.createElement("button");
     card.className = "card";
-    card.innerHTML = `<strong>${title}</strong><p>${type}</p>`;
+    card.textContent = title;
 
-    document.getElementById("projects-grid").appendChild(card);
+
+    
+    document.getElementById(type).appendChild(card);
 
     this.reset();
   });

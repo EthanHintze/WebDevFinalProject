@@ -34,14 +34,14 @@
                     <h1 id="home-title">Welcome</h1>
                     <p class="muted">This is a paper writing application that focuses on aiding the essay writing process</p>
 
-                    <div class="grid">
+                    <!-- <div class="grid">
                         <div class="card">
                             <strong>Fast</strong>
                         </div>
                         <div class="card">
                             <strong>Accessible</strong>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
 
                 <section id="about" class="page" aria-labelledby="about-title">
@@ -52,8 +52,11 @@
 
                 <section id="projects" class="page" aria-labelledby="projects-title">
                     <h1 id="projects-title">Projects</h1>
-                    <div id="projects-grid" class="grid" style="margin-top:12px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
-                        
+                    <div id="projects-grid" class="grid">
+                        <div id="english-grid" class="grid">English</div>
+                        <div id="math-grid" class="grid">Math</div>
+                        <div id="science-grid" class="grid">Science</div>
+                        <div id="other-grid" class="grid">Other</div>
                     </div>
                 </section>
 
@@ -61,10 +64,16 @@
                     <h1 id="newproject-title">New Project</h1>
                     <form id="new-project-form">
                         <label for="project-title">Project Title:</label>
-                        <input type="text" id="project-title" name="project-title" required />
+                        <input type="text" id="project-title" name="project-title" class="project-form" required />
 
                         <label for="project-type">Project Type:</label>
-                        <input type="text" id="project-type" name="project-type" required />
+                        <select id="project-type" name="project-type" class="project-form" required>
+                            <option value="">Select a project type</option>
+                            <option value="english-grid">English</option>
+                            <option value="math-grid">Math</option>
+                            <option value="science-grid">Science</option>
+                            <option value="other-grid">Other</option>
+                        </select>
 
                         <button type="submit">Create Project</button>
                     </form>
