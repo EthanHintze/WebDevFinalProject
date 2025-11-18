@@ -1,5 +1,16 @@
-export { projects };
-const projects = [];
+// export function convertToJson(form) {
+//     console.log("Made it to domain")
+//     let formData = {};
+//     for (let i = 0; i < form.elements.length; i++) {
+//         let element = form.elements[i];
+//         if (element.type !== "submit") {
+//             formData[element.name] = element.value;
+//         }
+//     }
+//     let jsonData = JSON.stringify(formData);
+//     return jsonData;
+    
+// }
 
 // export function addNewProject() {
 //   const newProject = {

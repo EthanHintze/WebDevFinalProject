@@ -1,9 +1,11 @@
+// import { convertToJson } from './Domain.js';
 // Simple hash-based router
 const routes = {
   "/": "home",
   "/about": "about",
   "/projects": "projects",
-  "/newproject": "newproject",
+  "/newProject": "newProject",
+  "/writingInterface": "writingInterface",
 };
 
 const navLinks = document.querySelectorAll("a.navlink");
@@ -54,13 +56,41 @@ document
     const title = document.getElementById("project-title").value;
     const type = document.getElementById("project-type").value;
 
-    const card = document.createElement("button");
-    card.className = "card";
-    card.textContent = title;
+    const projectAnchor = document.createElement("a");
+    projectAnchor.className = "card navLink";
+    projectAnchor.href = "#/writingInterface";
+    projectAnchor.textContent = title;
 
-
-    
-    document.getElementById(type).appendChild(card);
+    document.getElementById(type).appendChild(projectAnchor);
 
     this.reset();
   });
+
+//Submit text content to json converter
+document
+  .getElementById("dataForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const form = document.getElementById("dataForm");
+    let formData = {};
+    for (let i = 0; i < form.elements.length; i++) {
+      let element = form.elements[i];
+      if (element.type !== "submit") {
+        formData[element.name] = element.value;
+      }
+    }
+    let jsonData = JSON.stringify(formData);
+    let jsonOutput = document.getElementById("jsonOutput");
+    jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+  });
+// document.getElementById("dataForm").addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   console.log("Made it to ui")
+//   const formData = document.getElementById("dataForm");
+//   const jsonData = convertToJson(formData.value);
+
+//   const jsonOutput = document.getElementById("jsonOutput");
+//   const preElement = document.createElement("pre");
+//   preElement.textContent = jsonData;
+//   jsonOutput.appendChild(preElement);
+// });
