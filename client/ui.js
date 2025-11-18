@@ -80,8 +80,10 @@ document
       }
     }
     let jsonData = JSON.stringify(formData);
+    
     let jsonOutput = document.getElementById("jsonOutput");
-    jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+    jsonOutput
+    // jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
   });
 // document.getElementById("dataForm").addEventListener("submit", function (event) {
 //   event.preventDefault();

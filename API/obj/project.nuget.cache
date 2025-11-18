@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "SYtOseK0c90=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\offma\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\offma\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
