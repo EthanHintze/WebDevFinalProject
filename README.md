@@ -16,10 +16,13 @@ Nov 15 (50%)
 Nov 19 (70%)
 1. The user will be able to style their text and files (function and CSS)
 2. Have education videos available on site (Extra Credit)
+
 Nov 22 (80%)
 1. The user will have the file added to their local device (API and Extra Credit)
+
 Nov 25 (100%)
 1. The user will not have to wait for loading (Extra Credit)
+
 Dec 03 (100%)
 1. Recovery Time
 
