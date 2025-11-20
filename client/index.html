@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./ui.js" type="module"></script>
     <script src="./Domain.js" type="module"></script>
-    <title>Simple Navigator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.2/marked.min.js"></script>
+    <title>Simple Papers</title>
 
 </head>
 
@@ -42,11 +43,11 @@
                     <h1 id="about-title">Formats and Help</h1>
                     <p class="muted">This is where format help and general essay writing information will go.</p>
                     <h3>Tutorial Videos</h3>
-                    <grid class = "grid">
+                    <grid class="grid">
                         <iframe src="https://www.youtube.com/watch?v=XpmXT5Jdlaw"></iframe>
                         <iframe src="https://www.youtube.com/watch?v=c0e9DKDxUYU"></iframe>
                     </grid>
-                    
+
                 </section>
 
                 <section id="projects" class="page" aria-labelledby="projects-title">
@@ -85,12 +86,18 @@
                     <h1 id="writing-title">Writing Project</h1>
                     <form id="dataForm">
                         <label for="ProjectContent"></label><br>
-                        <textarea id="message" class="project-form" name="ProjectContent" rows="4" cols="50">
+                        <textarea id="editor" class="project-form" name="ProjectContent" rows="4" cols="50">
                         </textarea><br><br>
                         <button type="submit">
-                            Submit
+                            Save Content
                         </button>
                     </form>
+                    <h1>Preview</h1>
+                    <div class="container">
+                        <div class="preview-container">
+                            <div id="preview" class="preview-div"></div>
+                        </div>
+                    </div>
                     <div id="jsonOutput"></div>
                 </section>
 

@@ -80,11 +80,28 @@ document
       }
     }
     let jsonData = JSON.stringify(formData);
-    
+
     let jsonOutput = document.getElementById("jsonOutput");
-    jsonOutput
+    jsonOutput;
     // jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
   });
+
+// Markdown editor and preview
+document.addEventListener("DOMContentLoaded", () => {
+  const editor = document.getElementById("editor");
+  const preview = document.getElementById("preview");
+
+  function updatePreview() {
+    const markdown = editor.value;
+    const html = marked(markdown, { breaks: true });
+    preview.innerHTML = html;
+  }
+
+  editor.addEventListener("input", updatePreview);
+  updatePreview();
+});
+
+
 // document.getElementById("dataForm").addEventListener("submit", function (event) {
 //   event.preventDefault();
 //   console.log("Made it to ui")
