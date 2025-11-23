@@ -14,40 +14,25 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing",
-    "Bracing",
-    "Chilly",
-    "Cool",
-    "Mild",
-    "Warm",
-    "Balmy",
-    "Hot",
-    "Sweltering",
-    "Scorching",
-};
+app.MapPost(
+    "/upload",
+    async (IFormFile file) =>
+    {
+        if (file == null || file.Length == 0)
+            return Results.BadRequest("No file provided");
 
-app.MapGet(
-        "/weatherforecast",
-        () =>
+        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
+        Directory.CreateDirectory(uploadsFolder);
+
+        var filePath = Path.Combine(uploadsFolder, file.FileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
         {
-            var forecast = Enumerable
-                .Range(1, 5)
-                .Select(index => new WeatherForecast(
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-                .ToArray();
-            return forecast;
+            await file.CopyToAsync(stream);
         }
-    )
-    .WithName("GetWeatherForecast");
+
+        return Results.Ok(new { message = "File uploaded successfully", filePath });
+    }
+);
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
