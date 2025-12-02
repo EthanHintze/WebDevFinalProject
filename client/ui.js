@@ -67,24 +67,24 @@ document
   });
 
 //Submit text content to json converter
-document
-  .getElementById("dataForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    const form = document.getElementById("dataForm");
-    let formData = {};
-    for (let i = 0; i < form.elements.length; i++) {
-      let element = form.elements[i];
-      if (element.type !== "submit") {
-        formData[element.name] = element.value;
-      }
-    }
-    let jsonData = JSON.stringify(formData);
+// document
+//   .getElementById("dataForm")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault();
+//     const form = document.getElementById("dataForm");
+//     let formData = {};
+//     for (let i = 0; i < form.elements.length; i++) {
+//       let element = form.elements[i];
+//       if (element.type !== "submit") {
+//         formData[element.name] = element.value;
+//       }
+//     }
+//     let jsonData = JSON.stringify(formData);
 
-    let jsonOutput = document.getElementById("jsonOutput");
-    jsonOutput;
-    // jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
-  });
+//     let jsonOutput = document.getElementById("jsonOutput");
+//     jsonOutput;
+//     // jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+//   });
 
 // Markdown editor and preview
 document.addEventListener("DOMContentLoaded", () => {
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const baseURL = 'http://localhost:5132';
 // const baseURL = 'https://webdevfinalproject-geii.onrender.com';
-// Projecrt content saving and loading
+// Project content saving and loading
 document
   .getElementById("dataForm")
   .addEventListener("submit", async (event) => {
@@ -117,7 +117,7 @@ document
     const result = await fetch(baseURL + "/api/data/save", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(obj)
+    body: JSON.stringify(content)
   });
 
   console.log("Content saved:", await result.text());
