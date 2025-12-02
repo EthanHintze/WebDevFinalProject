@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj": {}
+    "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj": {
+    "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj",
-        "projectName": "API",
-        "projectPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\api\\api.csproj",
+        "projectName": "api",
+        "projectPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\api\\api.csproj",
         "packagesPath": "C:\\Users\\offma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\obj\\",
+        "outputPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\offma\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,7 +46,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

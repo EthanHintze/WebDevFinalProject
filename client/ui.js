@@ -101,15 +101,22 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePreview();
 });
 
+// Projecrt content saving and loading
+document
+  .getElementById("dataForm")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
+    console.log("Save button clicked");
+    const content = new FormData(event.target);
+    const obj = {};
 
-// document.getElementById("dataForm").addEventListener("submit", function (event) {
-//   event.preventDefault();
-//   console.log("Made it to ui")
-//   const formData = document.getElementById("dataForm");
-//   const jsonData = convertToJson(formData.value);
+    content.forEach((value, key) => {obj[key] = value;});
 
-//   const jsonOutput = document.getElementById("jsonOutput");
-//   const preElement = document.createElement("pre");
-//   preElement.textContent = jsonData;
-//   jsonOutput.appendChild(preElement);
-// });
+    const result = await fetch("https://localhost:5132/api/data/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj)
+  });
+
+  console.log("Content saved:", await result.text());
+  });
