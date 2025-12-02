@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePreview();
 });
 
+const baseURL = 'http://localhost:5132';
+// const baseURL = 'https://webdevfinalproject-geii.onrender.com';
 // Projecrt content saving and loading
 document
   .getElementById("dataForm")
@@ -112,7 +114,7 @@ document
 
     content.forEach((value, key) => {obj[key] = value;});
 
-    const result = await fetch("https://localhost:5132/api/data/save", {
+    const result = await fetch(baseURL + "/api/data/save", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(obj)
@@ -120,3 +122,4 @@ document
 
   console.log("Content saved:", await result.text());
   });
+

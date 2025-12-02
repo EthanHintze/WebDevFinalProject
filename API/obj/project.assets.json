@@ -75,24 +75,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\offma\\.nuget\\packages\\": {}
+    "C:\\Users\\ethan.hintze\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\ethan.hintze\\IntroToWeb\\final\\WebDevFinalProject\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\offma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProjectAgain\\WebDevFinalProject\\API\\obj\\",
+      "projectPath": "C:\\Users\\ethan.hintze\\IntroToWeb\\final\\WebDevFinalProject\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\ethan.hintze\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ethan.hintze\\IntroToWeb\\final\\WebDevFinalProject\\API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\offma\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ethan.hintze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -111,7 +119,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -141,7 +149,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

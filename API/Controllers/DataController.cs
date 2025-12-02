@@ -8,6 +8,7 @@ public class DataController : ControllerBase
     [HttpPost("save")]
     public async Task<IActionResult> Save([FromBody] FormDataDto formData)
     {
+        Console.WriteLine("Made it");
         if (formData == null)
             return BadRequest("Form data is missing");
 
@@ -18,7 +19,7 @@ public class DataController : ControllerBase
         });
 
         // Pick a save location
-        var folderPath = Path.Combine("C:\\Temp\\FormSaves");
+        var folderPath = Path.Combine("FormSaves");
         Directory.CreateDirectory(folderPath);
 
         // Create a unique file name
