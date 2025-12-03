@@ -1,4 +1,5 @@
 public class FormDataDto
 {
-    public string? ProjectData { get; set; }
+    public required string ProjectName { get; set; }
+    public required string ProjectData { get; set; }
 }

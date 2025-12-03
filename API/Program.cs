@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,6 +50,46 @@ app.MapPost(
         await System.IO.File.WriteAllTextAsync(filePath, json);
 
         return Results.Ok(new {status = $"Saved to {filePath}"});
+    }
+);
+app.MapGet(
+    "/api/data/load",
+    async ([FromQuery] string projectName) =>
+    {
+        if (string.IsNullOrWhiteSpace(projectName))
+            return Results.BadRequest("projectName is required");
+
+        var folderPath = Path.Combine("FormSaves");
+        if (!Directory.Exists(folderPath))
+            return Results.NotFound("No saved projects found");
+
+        var files = Directory.GetFiles(folderPath, "*.json");
+
+        var matches = new List<(string path, FormDataDto dto)>();
+
+        foreach (var f in files)
+        {
+            try
+            {
+                var text = await System.IO.File.ReadAllTextAsync(f);
+                var dto = JsonSerializer.Deserialize<FormDataDto>(text);
+                if (dto != null && string.Equals(dto.ProjectName, projectName, StringComparison.OrdinalIgnoreCase))
+                {
+                    matches.Add((f, dto));
+                }
+            }
+            catch
+            {
+                // ignore malformed files
+            }
+        }
+
+        if (!matches.Any())
+            return Results.NotFound(new { status = "No matching project found" });
+
+        var latest = matches.OrderByDescending(m => new FileInfo(m.path).LastWriteTime).First();
+
+        return Results.Ok(latest.dto);
     }
 );
 app.Run();

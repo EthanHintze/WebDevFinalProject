@@ -1,3 +1,13 @@
+var currentProjectName = undefined;
+
+export function setCurrentProjectName(name) {
+    currentProjectName = name;
+}
+export function getCurrentProjectName() {
+    return currentProjectName;
+}
+
+
 // export function convertToJson(form) {
 //     console.log("Made it to domain")
 //     let formData = {};

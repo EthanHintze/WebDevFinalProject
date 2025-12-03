@@ -1,4 +1,5 @@
-// import { convertToJson } from './Domain.js';
+import { getCurrentProjectName, setCurrentProjectName } from './Domain.js';
+import { loadProjectTextFromAPI, storeProjectTextOnAPI } from './service.js';
 // Simple hash-based router
 const routes = {
   "/": "home",
@@ -10,6 +11,8 @@ const routes = {
 
 const navLinks = document.querySelectorAll("a.navlink");
 const pages = document.querySelectorAll(".page");
+const projectTitleElement = document.getElementById("project-title");
+const projectContentElement = document.getElementById("editor");
 
 function setActive(route) {
   // show page
@@ -56,14 +59,14 @@ document
     const title = document.getElementById("project-title").value;
     const type = document.getElementById("project-type").value;
 
+    setCurrentProjectName(title);
+
     const projectAnchor = document.createElement("a");
     projectAnchor.className = "card navLink";
     projectAnchor.href = "#/writingInterface";
     projectAnchor.textContent = title;
 
     document.getElementById(type).appendChild(projectAnchor);
-
-    this.reset();
   });
 
 //Submit text content to json converter
@@ -87,7 +90,7 @@ document
 //   });
 
 // Markdown editor and preview
-document.addEventListener("DOMContentLoaded", () => {
+
   const editor = document.getElementById("editor");
   const preview = document.getElementById("preview");
 
@@ -99,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   editor.addEventListener("input", updatePreview);
   updatePreview();
-});
 
 const baseURL = 'http://localhost:5132';
 // const baseURL = 'https://webdevfinalproject-geii.onrender.com';
@@ -109,17 +111,11 @@ document
   .addEventListener("submit", async (event) => {
     event.preventDefault();
     console.log("Save button clicked");
-    const content = new FormData(event.target);
-    const obj = {};
+    await storeProjectTextOnAPI(
+      getCurrentProjectName(),
+      projectContentElement.value
+    );
+    console.log(await loadProjectTextFromAPI(getCurrentProjectName()));
 
-    content.forEach((value, key) => {obj[key] = value;});
-
-    const result = await fetch(baseURL + "/api/data/save", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(content)
-  });
-
-  console.log("Content saved:", await result.text());
   });
 
