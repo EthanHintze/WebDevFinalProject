@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\offma\\SchoolWork\\WebDev\\Final\\WebDevFinalProject\\API\\API.csproj": {}
+    "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\offma\\SchoolWork\\WebDev\\Final\\WebDevFinalProject\\API\\API.csproj": {
+    "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\offma\\SchoolWork\\WebDev\\Final\\WebDevFinalProject\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\Final\\WebDevFinalProject\\API\\API.csproj",
+        "projectPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj",
         "packagesPath": "C:\\Users\\offma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\Final\\WebDevFinalProject\\API\\obj\\",
+        "outputPath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\offma\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

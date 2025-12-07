@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "trOpZAw2zxg=",
+  "dgSpecHash": "qD8OB3pNkuo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\offma\\SchoolWork\\WebDev\\Final\\WebDevFinalProject\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\offma\\SchoolWork\\WebDev\\FinalProject\\WebDevFinalProject\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\offma\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
     "C:\\Users\\offma\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"

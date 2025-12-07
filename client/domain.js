@@ -15,5 +15,3 @@ export function getCurrentProjectName() {
 export function loadExistingProjects() {
     return projects;
 }
-
-

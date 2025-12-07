@@ -19,8 +19,8 @@
                 <a href="#/" class="brand" aria-label="Home">
                     <div class="logo">EP</div>
                     <div>
-                        <div style="font-weight:700">Easy Papers</div>
-                        <div class="muted" style="font-size:12px">Clean, Fast, Simple</div>
+                        <div class="easyPaper-title">Easy Papers</div>
+                        <div class="muted easyPaper-motto">Clean, Fast, Simple</div>
                     </div>
                 </a>
 
@@ -29,6 +29,7 @@
                     <a class="navlink" href="#/projects" data-route="/projects">Projects</a>
                     <a class="navlink" href="#/newProject" data-route="/newProject">New Project</a>
                     <a class="navlink" href="#/about" data-route="/about">Formats and Help</a>
+                    <a class="navlink" href="#/requirements" data-route="/requirements">Requirements</a>
                 </nav>
             </header>
 
@@ -44,9 +45,14 @@
                     <p class="muted">This is where format help and general essay writing information will go.</p>
                     <h3>Tutorial Videos</h3>
                     <grid class="grid">
-                        <iframe src="https://www.youtube.com/embed/XpmXT5Jdlaw"></iframe>
-                        <iframe src="https://www.youtube.com/watch?v=c0e9DKDxUYU"></iframe>
-                        <iframe src="https://www.youtube.com/watch?v=HUBNt18RFbo"></iframe>
+                        <ul>
+                            <a class="iframe-buttons navlink " href="https://www.youtube.com/embed/XpmXT5Jdlaw" target="video-Iframe">MLA Format Tutorial</a>
+                            <a class="iframe-buttons navlink " href="https://www.youtube.com/embed/c0e9DKDxUYU" target="video-Iframe">APA Format Tutorial</a>
+                            <a class="iframe-buttons navlink " href="https://www.youtube.com/embed/HUBNt18RFbo" target="video-Iframe">Markdown Syntax Tutorial</a>
+                        </ul>
+                        
+                        <iframe name="video-Iframe"></iframe>
+                
                     </grid>
 
                 </section>
@@ -100,6 +106,79 @@
                         </div>
                     </div>
                     <div id="jsonOutput"></div>
+                </section>
+
+                <section id="requirements" class="page" aria-labelledby="requirements-title">
+                    <h1 id="writing-title">Requirements</h1>
+                    <ul></ul>
+
+                    <div class="dnd-demo" aria-live="polite">
+                        <div class="dnd-container" id="left-container">
+                            <div class="dnd-item" draggable="true">Move me!!!</div>
+                            <div class="dnd-item" draggable="true">No move me!!!</div>
+                        </div>
+
+                        <div class="dnd-container" id="right-container">
+                        </div>
+                    </div>
+
+                    <aside>
+                        <p class="muted">Drag items from Container A into Container B and back.</p>
+                    </aside>
+                    
+                    <section class="animal-section" aria-labelledby="animals-title">
+                        <h3 id="animals-title">Animals</h3>
+                        <div class="animal-filter">
+                            <div class="filter-bar">
+                                <input type="search" id="animal-search" placeholder="Search animals by name" aria-label="Search animals" />
+                                <select id="animal-species" aria-label="Filter by species">
+                                    <option value="">All species</option>
+                                    <option value="mammal">Mammal</option>
+                                    <option value="bird">Bird</option>
+                                    <option value="reptile">Reptile</option>
+                                    <option value="amphibian">Amphibian</option>
+                                    <option value="fish">Fish</option>
+                                    <option value="insect">Insect</option>
+                                </select>
+                            </div>
+
+                            <ul id="animal-list" class="animal-list" role="list"></ul>
+                        </div>
+                    </section>
+
+                        <section class="card-demo-section" aria-labelledby="card-demo-title">
+                            <div class="card-demo" id="card-demo">
+                                <div class="demo-card">
+                                    <div class="demo-card-inner">
+                                        <p class="muted">Woah this hovers!!</p>
+                                    </div>
+                                </div>
+
+                                <div class="demo-card">
+                                    <div class="demo-card-inner">
+                                        <p class="muted">Wow a different accent color!!</p>
+                                    </div>
+                                </div>
+
+                                <div class="demo-card">
+                                    <div class="demo-card-inner">
+                                        <p class="muted">This is kinda lame :(</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    
+                        <section class="map-demo-section" aria-labelledby="map-demo-title">
+                            <h3 id="map-demo-title">Map() Demo</h3>
+                            <p class="muted">This small demo uses <code>Array.prototype.map</code> to transform data into DOM output.</p>
+                            <div class="map-controls">
+                                <button id="map-run" type="button">Run Map Demo</button>
+                                <button id="map-upper" type="button">Uppercase & Render</button>
+                            </div>
+                            <div id="map-output" class="map-output" aria-live="polite"></div>
+                        </section>
+
                 </section>
 
 
