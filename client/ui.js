@@ -1,4 +1,4 @@
-import { getCurrentProjectName, setCurrentProjectName } from './Domain.js';
+import { addProject, getCurrentProjectName, loadExistingProjects, setCurrentProjectName } from './Domain.js';
 import { loadProjectTextFromAPI, storeProjectTextOnAPI } from './service.js';
 // Simple hash-based router
 const routes = {
@@ -13,6 +13,11 @@ const navLinks = document.querySelectorAll("a.navlink");
 const pages = document.querySelectorAll(".page");
 const projectTitleElement = document.getElementById("project-title");
 const projectContentElement = document.getElementById("editor");
+const newProjectFormElement = document.getElementById("new-project-form");
+const writingTitleElement = document.getElementById("writing-title");
+const editor = document.getElementById("editor");
+const preview = document.getElementById("preview");
+const existingProjectsObject = loadExistingProjects();
 
 function setActive(route) {
   // show page
@@ -51,8 +56,7 @@ window.addEventListener("hashchange", render);
 window.addEventListener("load", render);
 
 // Handle new project form submission
-document
-  .getElementById("new-project-form")
+newProjectFormElement
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -60,39 +64,25 @@ document
     const type = document.getElementById("project-type").value;
 
     setCurrentProjectName(title);
+    
+    const projectAnchorElement = document.createElement("a");
+    projectAnchorElement.className = "card navLink";
+    projectAnchorElement.href = "#/writingInterface";
+    projectAnchorElement.textContent = title;
+    writingTitleElement.textContent = title;
+    
+    addProject(projectAnchorElement);
 
-    const projectAnchor = document.createElement("a");
-    projectAnchor.className = "card navLink";
-    projectAnchor.href = "#/writingInterface";
-    projectAnchor.textContent = title;
-
-    document.getElementById(type).appendChild(projectAnchor);
+    document.getElementById(type).appendChild(projectAnchorElement);
+    newProjectFormElement.reset();
   });
 
-//Submit text content to json converter
-// document
-//   .getElementById("dataForm")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     const form = document.getElementById("dataForm");
-//     let formData = {};
-//     for (let i = 0; i < form.elements.length; i++) {
-//       let element = form.elements[i];
-//       if (element.type !== "submit") {
-//         formData[element.name] = element.value;
-//       }
-//     }
-//     let jsonData = JSON.stringify(formData);
-
-//     let jsonOutput = document.getElementById("jsonOutput");
-//     jsonOutput;
-//     // jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
-//   });
+  existingProjectsObject.forEach(element => {
+    document.getElementById(element.type).appendChild(element);
+  });
 
 // Markdown editor and preview
 
-  const editor = document.getElementById("editor");
-  const preview = document.getElementById("preview");
 
   function updatePreview() {
     const markdown = editor.value;

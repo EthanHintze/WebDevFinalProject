@@ -45,7 +45,7 @@ app.MapPost(
         Directory.CreateDirectory(folderPath);
 
         // Create a unique file name
-        var filePath = Path.Combine(folderPath, $"form_{DateTime.Now:yyyyMMdd_HHmmss}.json");
+        var filePath = Path.Combine(folderPath, $"{formData.ProjectName}.json");
 
         await System.IO.File.WriteAllTextAsync(filePath, json);
 

@@ -99,3 +99,5 @@ C:\Users\offma\SchoolWork\WebDev\Final\WebDevFinalProject\API\obj\Debug\net9.0\r
 C:\Users\offma\SchoolWork\WebDev\Final\WebDevFinalProject\API\obj\Debug\net9.0\API.pdb
 C:\Users\offma\SchoolWork\WebDev\Final\WebDevFinalProject\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Users\offma\SchoolWork\WebDev\Final\WebDevFinalProject\API\obj\Debug\net9.0\ref\API.dll
+C:\Users\offma\SchoolWork\WebDev\Final\WebDevFinalProject\API\bin\Debug\net9.0\FormSaves\math.json
+C:\Users\offma\SchoolWork\WebDev\Final\WebDevFinalProject\API\bin\Debug\net9.0\FormSaves\jdhsjklahjkdfsl.json
